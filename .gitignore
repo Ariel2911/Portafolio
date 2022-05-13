@@ -1,2 +1,4 @@
+gulpfile.babel.js
 node_modules
+.browserslistrc
 .eslintrc.js
