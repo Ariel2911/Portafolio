@@ -1,0 +1,75 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="./styles/styles.css")
+    title Document
+  body 
+    //- sección "Sobre mí"
+    section.section
+      .section__title-container
+        h1.title
+        h2.subtitle
+      .card-container
+        section.card
+          img.card__img(src="", alt="")
+          .card__text-container
+          h3.card__title
+          p.card__paragraph
+
+        .contact
+          img.card__icon(src="", alt="")
+          img.card__icon(src="", alt="")
+
+    //- sección "Tecnologías"
+    section.section
+      section.section__title
+        h2.section__title
+      .card-container
+          ul.card__grid
+            li.card
+              img.card__img
+              img.card__img(src="", alt="")
+            li.card
+              img.card__img
+              img.card__img(src="", alt="")
+          button.button-primary
+    //- sección "Proyectos"
+    section.section
+      section.section__title
+        h2.section__title
+      .card-container
+        section.card
+            h3.card__title 
+            img.card__img(src="", alt="")
+            p.card__description
+            button.button--primary
+            button.button--secondary
+        section.card
+            h3.card__title 
+            img.card__img(src="", alt="")
+            p.card__description
+            button.button--primary
+            button.button--secondary
+        section.card
+            h3.card__title 
+            img.card__img(src="", alt="")
+            p.card__description
+            button.button--primary
+            button.button--secondary
+    //- sección "Contacto"
+    section.section
+      section.section__title
+        h2.section__title
+      .card-container
+        section.card
+          input.card__Input(type="text")
+          input.card__Input(type="text")
+          textarea.card__Input(name="", cols="30", rows="10") 
+          button.button-primary.card__Input
+        section.card
+          .card__contact
+          .card__contact
+          .card__contact
