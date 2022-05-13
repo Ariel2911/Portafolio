@@ -10,66 +10,81 @@ html(lang="en")
     //- sección "Sobre mí"
     section.section
       .section__title-container
-        h1.title
-        h2.subtitle
+        h1.title Ariel Barrios
+        h2.subtitle Desarrollador Frontend
       .card-container
         section.card
-          img.card__img(src="", alt="")
+          img.card__img(src="", alt="Foto de Ariel")
           .card__text-container
-          h3.card__title
-          p.card__paragraph
+            h3.card__title Sobre mí
+            p.card__paragraph Actualmente me encuentro capacitándome en el área del desarrollo Web. Poseo conocimientos de backend pero decidí comenzar a especializarme de forma seria desde el frontend para luego continuar con el backend. Busco ganar conocimientos que sólo la  experiencia en un trabajo real pueden darme.
 
         .contact
-          img.card__icon(src="", alt="")
-          img.card__icon(src="", alt="")
+          a: img.card__icon(src="", alt="enlace a Linkedin")
+          a: img.card__icon(src="", alt="enlace a github")
 
     //- sección "Tecnologías"
     section.section
-      section.section__title
-        h2.section__title
+      h2.section__title Tecnologías
       .card-container
           ul.card__grid
             li.card
-              img.card__img
-              img.card__img(src="", alt="")
+              img.card__img(src="", alt="icono de React")
+              h3.card__title--technology 
             li.card
-              img.card__img
-              img.card__img(src="", alt="")
-          button.button-primary
+              img.card__img(src="", alt="icono de TypeScript")
+              h3.card__title--technology
+          button.button-primary Ver más
+
     //- sección "Proyectos"
     section.section
-      section.section__title
-        h2.section__title
+      h2.section__title Proyectos
       .card-container
+
         section.card
-            h3.card__title 
-            img.card__img(src="", alt="")
-            p.card__description
-            button.button--primary
-            button.button--secondary
+            h3.card__title Portafolio
+            img.card__img(src="", alt="imagen de la pantalla del proyecto")
+            .card__description-container
+              p.card__made-with Realizado con:
+              p.card__technology HTML, Sass, JavaScript
+            button.button--primary Ir al sitio
+            button.button--secondary Ir al repositorio
+
         section.card
-            h3.card__title 
-            img.card__img(src="", alt="")
-            p.card__description
-            button.button--primary
-            button.button--secondary
+            h3.card__title E-commerce
+            img.card__img(src="", alt="imagen de la pantalla del proyecto")
+            .card__description-container
+              p.card__made-with Realizado con:
+              p.card__technology HTML, Sass, JavaScript
+            button.button--primary Ir al sitio
+            button.button--secondary Ir al repositorio
+
         section.card
-            h3.card__title 
-            img.card__img(src="", alt="")
-            p.card__description
-            button.button--primary
-            button.button--secondary
+            h3.card__title Portafolio
+            img.card__img(src="", alt="imagen de la pantalla del proyecto")
+            .card__description-container
+              p.card__made-with Realizado con:
+              p.card__technology HTML, Sass, JavaScript
+            button.button--primary Ir al sitio
+            button.button--secondary Ir al repositorio
+        
     //- sección "Contacto"
     section.section
-      section.section__title
-        h2.section__title
+      h2.section__title Contacto
       .card-container
         section.card
-          input.card__Input(type="text")
-          input.card__Input(type="text")
-          textarea.card__Input(name="", cols="30", rows="10") 
-          button.button-primary.card__Input
+          input.card__Input(type="text" placeholder="Nombre") 
+          input.card__Input(type="text" placeholder="Email")
+          textarea.card__Input(
+              name="comments"
+              cols="50"
+              rows="10"
+              placeholder="Déjame tú mensaje *"
+              ) 
+          button.button-primary.card__Input Enviar mensaje
         section.card
-          .card__contact
-          .card__contact
-          .card__contact
+          .card__contact: p ariel29111978@hotmail.com
+          .card__contact: p Buenos Aires, Temperley
+          .contact
+            a: img.card__icon(src="", alt="enlace a Linkedin")
+            a: img.card__icon(src="", alt="enlace a github")
