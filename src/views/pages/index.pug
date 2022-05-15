@@ -12,22 +12,22 @@ html(lang="en")
       .section__title-container
         h1.title Ariel Barrios
         h2.subtitle Desarrollador Frontend
-      .card-container
+      .section__container
         section.card
           img.card__img(src="", alt="Foto de Ariel")
-          .card__text-container
-            h3.card__title Sobre mí
-            p.card__paragraph Actualmente me encuentro capacitándome en el área del desarrollo Web. Poseo conocimientos de backend pero decidí comenzar a especializarme de forma seria desde el frontend para luego continuar con el backend. Busco ganar conocimientos que sólo la  experiencia en un trabajo real pueden darme.
+          .abaut-me
+            h3.abaut-me__title Sobre mí
+            p.abaut-me__paragraph Actualmente me encuentro capacitándome en el área del desarrollo Web. Poseo conocimientos de backend pero decidí comenzar a especializarme de forma seria desde el frontend para luego continuar con el backend. Busco ganar conocimientos que sólo la  experiencia en un trabajo real pueden darme.
 
-        .contact
-          a: img.card__icon(src="", alt="enlace a Linkedin")
-          a: img.card__icon(src="", alt="enlace a github")
+        .abaut-me__contact
+          a: img.abaut-me__icon(src="", alt="enlace a Linkedin")
+          a: img.abaut-me__icon(src="", alt="enlace a github")
 
     //- sección "Tecnologías"
     section.section
       h2.section__title Tecnologías
-      .card-container
-          ul.card__grid
+      .section__container
+          ul.section__list
             li.card
               img.card__img(src="", alt="icono de React")
               h3.card__title--technology 
@@ -39,14 +39,14 @@ html(lang="en")
     //- sección "Proyectos"
     section.section
       h2.section__title Proyectos
-      .card-container
+      .section__container
 
         section.card
             h3.card__title Portafolio
             img.card__img(src="", alt="imagen de la pantalla del proyecto")
-            .card__description-container
-              p.card__made-with Realizado con:
-              p.card__technology HTML, Sass, JavaScript
+            .card__container
+              p.card__subtitle Realizado con:
+              p.card__text HTML, Sass, JavaScript
             button.button--primary Ir al sitio
             button.button--secondary Ir al repositorio
 
@@ -54,8 +54,8 @@ html(lang="en")
             h3.card__title E-commerce
             img.card__img(src="", alt="imagen de la pantalla del proyecto")
             .card__description-container
-              p.card__made-with Realizado con:
-              p.card__technology HTML, Sass, JavaScript
+              p.card__subtitle Realizado con:
+              p.card__text HTML, Sass, JavaScript
             button.button--primary Ir al sitio
             button.button--secondary Ir al repositorio
 
@@ -63,28 +63,32 @@ html(lang="en")
             h3.card__title Portafolio
             img.card__img(src="", alt="imagen de la pantalla del proyecto")
             .card__description-container
-              p.card__made-with Realizado con:
-              p.card__technology HTML, Sass, JavaScript
+              p.card__subtitle Realizado con:
+              p.card__text HTML, Sass, JavaScript
             button.button--primary Ir al sitio
             button.button--secondary Ir al repositorio
         
     //- sección "Contacto"
     section.section
       h2.section__title Contacto
-      .card-container
-        section.card
-          input.card__Input(type="text" placeholder="Nombre") 
-          input.card__Input(type="text" placeholder="Email")
-          textarea.card__Input(
+      .section__container
+        form.form.card
+          input.form__input(type="text" placeholder="Nombre") 
+          input.form__input(type="text" placeholder="Email")
+          textarea.form__area(
               name="comments"
               cols="50"
               rows="10"
               placeholder="Déjame tú mensaje *"
               ) 
-          button.button-primary.card__Input Enviar mensaje
-        section.card
-          .card__contact: p ariel29111978@hotmail.com
-          .card__contact: p Buenos Aires, Temperley
-          .contact
-            a: img.card__icon(src="", alt="enlace a Linkedin")
-            a: img.card__icon(src="", alt="enlace a github")
+          button.button-primary.card__input Enviar mensaje
+        section.contact.card
+          .contact__item
+            img(src="", alt="").contact__icon
+            p.contact__text ariel29111978@hotmail.com
+          .contact__item 
+            img(src="", alt="").contact__icon
+            p.contact__text Buenos Aires, Temperley
+          .contact__item
+            a: img.contact__icon(src="", alt="enlace a Linkedin")
+            a: img.contact__icon(src="", alt="enlace a github")
