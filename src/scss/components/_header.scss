@@ -1,0 +1,9 @@
+@use 'abstract/var';
+
+.header{
+  // display: flex;
+  position: sticky;
+  // top: 0;
+  z-index: 20;
+  height: 44px;
+}

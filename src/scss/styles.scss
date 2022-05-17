@@ -1,11 +1,14 @@
 @use 'abstract/var';
 @use 'components/aboutMe';
+@use 'components/btnMenu';
 @use 'components/button';
 @use 'components/card';
 @use 'components/contact';
 @use 'components/form';
 @use 'components/header';
+@use 'components/navBar';
 @use 'components/section';
+
 // Reset
 * {
   box-sizing: border-box;
@@ -24,7 +27,7 @@ img{
 }
 
 body {
-  margin: 0 16px;
+  margin: 0;
   text-align: center;
 
   background-image: url('/assets/image/bg-desktop-unsplash.jpg');
@@ -37,7 +40,13 @@ body {
   color: var.$color-primary;
   font-family: var.$font-secondary;
 
-  & > *{
+  & > section{
     max-width: 400px;
+    margin-left: 16px;
+    margin-right: 16px;
   }
+}
+
+.main{
+  margin: 16px;
 }
