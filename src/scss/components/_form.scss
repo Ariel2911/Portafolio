@@ -1,4 +1,15 @@
+@use 'abstract/var';
+
 .form{
+  // padding: 0;
+  > *{
+    margin-bottom: var.$margin-primary;
+    padding: var.$padding-secundary;
+    border: var.$border-secundary;
+    border-radius: var.$radius-primary;
+    font-family: var.$font-secondary;
+    font-size: 1rem;
+  }
   &__input{
 
   }

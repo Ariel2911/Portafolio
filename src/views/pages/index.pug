@@ -1,40 +1,49 @@
 doctype html
-html(lang="en")
+html(lang="es")
   head
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(rel="stylesheet", href="./styles/styles.css")
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet")
     title Document
   body 
     //- sección "Sobre mí"
     section.section
       .section__title-container
-        h1.title Ariel Barrios
-        h2.subtitle Desarrollador Frontend
+        h1.section__title Ariel Barrios
+        h2.section__subtitle Desarrollador Frontend
       .section__container
         section.card
-          img.card__img(src="", alt="Foto de Ariel")
-          .abaut-me
-            h3.abaut-me__title Sobre mí
-            p.abaut-me__paragraph Actualmente me encuentro capacitándome en el área del desarrollo Web. Poseo conocimientos de backend pero decidí comenzar a especializarme de forma seria desde el frontend para luego continuar con el backend. Busco ganar conocimientos que sólo la  experiencia en un trabajo real pueden darme.
+          img.card__img(src="./assets/image/ariel.jpg", alt="Foto de Ariel")
+          .about-me
+            h3.about-me__title Sobre mí
+            p.about-me__paragraph Actualmente me encuentro capacitándome en el área del desarrollo Web. Poseo conocimientos de backend pero decidí comenzar a especializarme de forma seria desde el frontend para luego continuar con el backend. Busco ganar conocimientos que sólo la  experiencia en un trabajo real pueden darme.
 
-        .abaut-me__contact
-          a: img.abaut-me__icon(src="", alt="enlace a Linkedin")
-          a: img.abaut-me__icon(src="", alt="enlace a github")
+        .contact__item
+          a.contact__link: img.contact__icon(src="./assets/icons/linkedin.svg", alt="enlace a Linkedin")
+          a.contact__link: img.contact__icon(src="./assets/icons/git-hub.svg", alt="enlace a github")
 
     //- sección "Tecnologías"
     section.section
       h2.section__title Tecnologías
       .section__container
           ul.section__list
-            li.card
-              img.card__img(src="", alt="icono de React")
-              h3.card__title--technology 
-            li.card
-              img.card__img(src="", alt="icono de TypeScript")
-              h3.card__title--technology
-          button.button-primary Ver más
+            li.card.card--technology
+              img.card__img(src="./assets/icons/react.svg", alt="icono de React")
+              h3.card__title--technology React
+            li.card.card--technology
+              img.card__img(src="./assets/icons/typeScript.svg", alt="icono de TypeScript")
+              h3.card__title--technology TypeScript
+            li.card.card--technology
+              img.card__img(src="./assets/icons/styledComponent.svg", alt="icono de Styled Component")
+              h3.card__title--technology Styled Component
+            li.card.card--technology
+              img.card__img(src="./assets/icons/js.svg", alt="icono de JavaScript")
+              h3.card__title--technology JavaScript
+          button.btn.btn-primary Ver más
 
     //- sección "Proyectos"
     section.section
@@ -43,52 +52,52 @@ html(lang="en")
 
         section.card
             h3.card__title Portafolio
-            img.card__img(src="", alt="imagen de la pantalla del proyecto")
+            img.card__img(src="./assets/image/projects/img-Iskrem.png", alt="imagen de la pantalla del proyecto")
             .card__container
               p.card__subtitle Realizado con:
               p.card__text HTML, Sass, JavaScript
-            button.button--primary Ir al sitio
-            button.button--secondary Ir al repositorio
+            button.btn.btn-primary Ir al sitio
+            button.btn.btn-secondary Ir al repositorio
 
         section.card
             h3.card__title E-commerce
-            img.card__img(src="", alt="imagen de la pantalla del proyecto")
+            img.card__img(src="./assets/image/projects/img-Iskrem.png", alt="imagen de la pantalla del proyecto")
             .card__description-container
               p.card__subtitle Realizado con:
-              p.card__text HTML, Sass, JavaScript
-            button.button--primary Ir al sitio
-            button.button--secondary Ir al repositorio
+              p.card__text React, CSS, Firebase
+            button.btn.btn-primary Ir al sitio
+            button.btn.btn-secondary Ir al repositorio
 
         section.card
-            h3.card__title Portafolio
-            img.card__img(src="", alt="imagen de la pantalla del proyecto")
+            h3.card__title Landing page
+            img.card__img(src="./assets/image/projects/img-base_apparel.png", alt="imagen de la pantalla del proyecto")
             .card__description-container
               p.card__subtitle Realizado con:
-              p.card__text HTML, Sass, JavaScript
-            button.button--primary Ir al sitio
-            button.button--secondary Ir al repositorio
+              p.card__text HTML, CSS, JavaScript
+            button.btn.btn-primary Ir al sitio
+            button.btn.btn-secondary Ir al repositorio
         
     //- sección "Contacto"
     section.section
       h2.section__title Contacto
       .section__container
         form.form.card
-          input.form__input(type="text" placeholder="Nombre") 
-          input.form__input(type="text" placeholder="Email")
+          input.form__input(type="text" placeholder="Nombre *") 
+          input.form__input(type="text" placeholder="Email *")
           textarea.form__area(
               name="comments"
-              cols="50"
+              cols="30"
               rows="10"
               placeholder="Déjame tú mensaje *"
-              ) 
-          button.button-primary.card__input Enviar mensaje
+              )
+          button.btn.btn-primary.card__input Enviar mensaje
         section.contact.card
           .contact__item
-            img(src="", alt="").contact__icon
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 18 24"><path fill="currentColor" d="M8.075 23.52C1.264 13.642 0 12.629 0 9c0-4.971 4.029-9 9-9s9 4.029 9 9c0 3.629-1.264 4.64-8.075 14.516a1.126 1.126 0 0 1-1.847.004l-.002-.004zM9 12.75a3.75 3.75 0 1 0 0-7.5a3.75 3.75 0 0 0 0 7.5z"/></svg>
             p.contact__text ariel29111978@hotmail.com
           .contact__item 
-            img(src="", alt="").contact__icon
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><path fill="currentColor" d="M4 3a2 2 0 0 0-2 2v.201l6 3.231l6-3.23V5a2 2 0 0 0-2-2H4Zm10 3.337L8.237 9.44a.5.5 0 0 1-.474 0L2 6.337V11a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V6.337Z"/></svg>
             p.contact__text Buenos Aires, Temperley
           .contact__item
-            a: img.contact__icon(src="", alt="enlace a Linkedin")
-            a: img.contact__icon(src="", alt="enlace a github")
+            a.contact__link: img.contact__icon(src="./assets/icons/linkedin.svg", alt="enlace a Linkedin")
+            a.contact__link: img.contact__icon(src="./assets/icons/git-hub.svg", alt="enlace a github")

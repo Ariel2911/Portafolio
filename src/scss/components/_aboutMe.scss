@@ -1,4 +1,7 @@
-.abaut-me{
+@use 'abstract/var';
+
+.about-me{
+
   &__title{
 
   }
@@ -6,7 +9,10 @@
 
   }
   &__contact{
-
+    display: flex;
+    flex-direction: row;
+    gap: var.$gap-secundary;
+    margin: 0 auto;
   }
   &__icon{
     

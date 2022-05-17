@@ -18,7 +18,7 @@ const dev = () => {
   init({ server: './public' });
 
   watch('src/views/**/*.pug', pugPipe).on('change', reload);
-  watch('src/scss/*.scss', () => sassPipe(stream));
+  watch('src/scss/**/*.scss', () => sassPipe(stream));
 
   watch('src/js/*.js', jsPipe).on('change', reload);
 };

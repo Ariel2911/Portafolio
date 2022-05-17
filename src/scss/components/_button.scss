@@ -1,8 +1,19 @@
-button{
-  &--primary{
+@use 'abstract/var';
+
+.btn{
+  padding: var.$padding-secundary;
+  border: var.$border-secundary;
+  border-radius: var.$radius-primary;
+  font-size: 1rem;
+  color: inherit;
+  margin-bottom: var.$margin-secundary;
+
+  &-primary{
+    background: var.$color-primary;
+    color: var.$color-tertiary;
 
   }
-  &--secondary{
+  &-secondary{
 
   }
 }

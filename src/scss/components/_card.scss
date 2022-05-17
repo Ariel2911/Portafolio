@@ -1,16 +1,31 @@
+@use '../abstract/var';
+
 .card{
+  display: flex;
+    flex-direction: column;
+    padding: var.$padding-primary;
+    border-radius: var.$radius-primary;
+    background-color: var.$bg-c-card;
+
+  &--technology{
+    max-width: 100px;
+  }  
   &__img{
 
   }  
   &__title{
+    // font-size: 24px;
+    // margin: 0;
 
     &--technology{
-
+      margin: auto 0;
+      font-size: 0.75rem;
     }
 
   }
   &__container{
-
+    // display: flex;
+    // flex-direction: row;
   }
   &__subtitle{
 

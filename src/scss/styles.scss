@@ -1,0 +1,43 @@
+@use 'abstract/var';
+@use 'components/aboutMe';
+@use 'components/button';
+@use 'components/card';
+@use 'components/contact';
+@use 'components/form';
+@use 'components/header';
+@use 'components/section';
+// Reset
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+img{
+  width: 100%;
+  border-radius: var.$radius-primary;
+}
+
+body {
+  margin: 0 16px;
+  text-align: center;
+
+  background-image: url('/assets/image/bg-desktop-unsplash.jpg');
+  background-position-x: 80%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+
+  color: var.$color-primary;
+  font-family: var.$font-secondary;
+
+  & > *{
+    max-width: 400px;
+  }
+}
