@@ -1,8 +1,7 @@
 @use 'abstract/var';
 
-.form{
-  // padding: 0;
-  & > *{
+.form{  
+  & input, & textarea{
     margin-bottom: var.$margin-primary;
     padding: var.$padding-secundary;
     border: var.$border-secundary;

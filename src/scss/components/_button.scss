@@ -6,7 +6,6 @@
   border-radius: var.$radius-primary;
   font-size: 1rem;
   color: inherit;
-  margin-bottom: var.$margin-secundary;
 
   &-primary{
     background: var.$color-primary;
@@ -14,6 +13,6 @@
 
   }
   &-secondary{
-
+    margin-top: var.$margin-secundary;
   }
 }
