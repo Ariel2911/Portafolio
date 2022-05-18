@@ -1,7 +1,7 @@
 @use 'abstract/var';
 
 .btn-menu {
-  position: absolute;
+  position: fixed;
   left: 8px;
   top: 8px;
   z-index: 40;

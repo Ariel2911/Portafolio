@@ -3,6 +3,7 @@
 .contact{
 
   & > *{
+    margin-bottom: 16px;
     border: var.$border-secundary;
     background-color: whitesmoke;
   }
@@ -12,12 +13,14 @@
     justify-content: center;
     align-items: center;
     gap: 4px;
-    margin-bottom: 16px;
     padding-top: 4px;
     padding-bottom: 4px;
     border-radius: var.$radius-primary;
     font-family: var.$font-secondary;
-    font-size: 0.75rem;    
+    font-size: 0.75rem;
+    &:last-child{
+      margin: 0;
+    } 
   }
   &__link{
     margin: 0 32px;
