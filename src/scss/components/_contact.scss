@@ -4,6 +4,7 @@
 
   & > *{
     border: var.$border-secundary;
+    background-color: whitesmoke;
   }
   
   &__item{
@@ -16,9 +17,7 @@
     padding-bottom: 4px;
     border-radius: var.$radius-primary;
     font-family: var.$font-secondary;
-    font-size: 0.75rem;
-    
-    background-color: whitesmoke;
+    font-size: 0.75rem;    
   }
   &__link{
     margin: 0 32px;
