@@ -1,0 +1,11 @@
+.more-technologies {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease;
+
+  &--active {
+    height: 641px;
+  }
+}
+
+

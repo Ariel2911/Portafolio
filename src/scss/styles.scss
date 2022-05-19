@@ -1,6 +1,7 @@
 @use 'abstract/var';
 @use 'components/aboutMe';
 @use 'components/btnMenu';
+@use 'components/btnSeeMore';
 @use 'components/button';
 @use 'components/card';
 @use 'components/contact';
@@ -18,6 +19,7 @@ a {
   color: inherit;
 }
 ul {
+  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -32,10 +34,8 @@ body {
 
   background-image: url('/assets/image/bg-desktop-unsplash.jpg');
   background-position-x: 80%;
-  // background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  // height: 100vh;
 
   color: var.$color-primary;
   font-family: var.$font-secondary;
@@ -46,6 +46,6 @@ body {
   min-width: 300px;
   margin: auto;
   & > * {
-    margin: 16px;
+    margin: var.$margin-primary;
   }
 }

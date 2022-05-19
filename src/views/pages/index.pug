@@ -36,7 +36,7 @@ html(lang="es")
             img.card__img(src="./assets/image/ariel.jpg", alt="Foto de Ariel")
             .about-me
               h3.about-me__title Sobre mí
-              p.about-me__paragraph Actualmente me encuentro capacitándome en el área del desarrollo Web. Poseo conocimientos de backend pero decidí comenzar a especializarme de forma seria desde el frontend para luego continuar con el backend. Busco ganar conocimientos que sólo la  experiencia en un trabajo real pueden darme.
+              p.about-me__paragraph Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis vel qui nam ab quisquam ut atque, omnis sapiente natus. Iure, similique numquam. Vel atque iusto nobis ducimus architecto suscipit placeat.
           .contact__item
             a.contact__link(href="https://www.linkedin.com/in/ariel-alejandro-barrios-0bb358199/" target="_blank" rel="noopener noreferrer")
               img.contact__icon(src="./assets/icons/linkedin.svg", alt="enlace a Linkedin")
@@ -60,7 +60,35 @@ html(lang="es")
             li.card.card--technology
               img.card__img(src="./assets/icons/js.svg", alt="icono de JavaScript")
               h3.card__title--technology JavaScript
-          button.btn.btn-primary Ver más
+          ul.section__list.more-technologies
+            li.card.card--technology
+              img.card__img(src="./assets/icons/html.svg", alt="icono de HTML")
+              h3.card__title--technology HTML
+            li.card.card--technology
+              img.card__img(src="./assets/icons/css.svg", alt="icono de CSS")
+              h3.card__title--technology CSS
+            li.card.card--technology
+              img.card__img(src="./assets/icons/pug.svg", alt="icono de Pug")
+              h3.card__title--technology Pug
+            li.card.card--technology
+              img.card__img(src="./assets/icons/sass.svg", alt="icono de Sass")
+              h3.card__title--technology Sass
+            li.card.card--technology
+              img.card__img(src="./assets/icons/npm.svg", alt="icono de NPM")
+              h3.card__title--technology NPM
+            li.card.card--technology
+              img.card__img(src="./assets/icons/gulp.svg", alt="icono de Gulp")
+              h3.card__title--technology Gulp
+            li.card.card--technology
+              img.card__img(src="./assets/icons/webpack.svg", alt="icono de Webpack")
+              h3.card__title--technology Webpack
+            li.card.card--technology
+              img.card__img(src="./assets/icons/git.svg", alt="icono de Git")
+              h3.card__title--technology Git
+            li.card.card--technology.section__list--odd
+              img.card__img(src="./assets/icons/figma.svg", alt="icono de Figma")
+              h3.card__title--technology Figma
+          button#btnSeeMore.btn.btn-primary Ver más
 
       //- sección "Proyectos"
       section#projects.section
@@ -120,4 +148,4 @@ html(lang="es")
                 img.contact__icon(src="./assets/icons/linkedin.svg", alt="enlace a Linkedin")
               a.contact__link(href="https://github.com/Ariel2911" target="_blank" rel="noopener noreferrer")
                 img.contact__icon(src="./assets/icons/git-hub.svg", alt="enlace a github")
-    script(src="./js/index.js") 
+    script(src="./js/index.js" type="module")
