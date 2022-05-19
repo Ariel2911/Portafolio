@@ -1,5 +1,5 @@
-gulpfile.babel.js
 node_modules
+gulpfile.babel.js
+dev
 .browserslistrc
 .eslintrc.js
-public
