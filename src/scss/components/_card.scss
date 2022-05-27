@@ -2,10 +2,11 @@
 
 .card{
   display: flex;
-    flex-direction: column;
-    padding: var.$padding-primary;
-    border-radius: var.$radius-primary;
-    background-color: var.$bg-c-card;
+  flex-direction: column;
+  align-items: center;
+  padding: var.$padding-primary;
+  border-radius: var.$radius-primary;
+  background-color: var.$bg-c-card;
 
   &--technology{
     max-width: 100px;

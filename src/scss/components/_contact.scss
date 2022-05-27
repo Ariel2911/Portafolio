@@ -1,8 +1,8 @@
 @use 'abstract/var';
 
 .contact{
-
   & > *{
+    width: 100%;
     margin-bottom: 16px;
     border: var.$border-secundary;
     background-color: whitesmoke;
@@ -16,19 +16,24 @@
     padding-top: 4px;
     padding-bottom: 4px;
     border-radius: var.$radius-primary;
+
     font-family: var.$font-secondary;
     font-size: 0.75rem;
+
     &:last-child{
       margin: 0;
     } 
   }
+
   &__link{
     margin: 0 32px;
 
   }
+
   &__icon{
     filter: brightness(0) saturate(100%) invert(39%) sepia(6%) saturate(2354%) hue-rotate(314deg) brightness(76%) contrast(71%);
   }
+  
   &__text{
     margin: 0;    
   }  

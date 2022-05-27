@@ -1,6 +1,7 @@
 @use 'abstract/var';
 
 .btn{
+  width: 75%;
   padding: var.$padding-secundary;
   border: var.$border-secundary;
   border-radius: var.$radius-primary;

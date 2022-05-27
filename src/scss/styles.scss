@@ -45,7 +45,12 @@ body {
   max-width: 400px;
   min-width: 300px;
   margin: auto;
+  
   & > * {
     margin: var.$margin-primary;
   }
+}
+
+.hidden{
+  display: none;
 }
