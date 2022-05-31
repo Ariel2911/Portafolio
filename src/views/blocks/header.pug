@@ -1,0 +1,10 @@
+- var navItems = ['Inicio', 'Tecnologías', 'Proyectos', 'Contacto'];
+
+header.header 
+  nav#nav-bar.nav-bar
+    ul#nav-bar-list.nav-bar__list
+      each navItem in navItems 
+        li.nav-bar__item 
+          a.nav-bar__link(href="#about-me")=navItem
+  button#btn-menu.btn-menu(type="button")
+    span#btn-menu-bar.btn-menu__bar

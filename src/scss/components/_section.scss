@@ -35,13 +35,11 @@
   }
 
   &__list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-    justify-items: center;
+    // display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: var.$gap-primary;
-
-    &--odd{
-      grid-column: span 2;
-    }
   }
 }

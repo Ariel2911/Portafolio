@@ -1,0 +1,43 @@
+section#contact.section
+  h2.section__title Contacto
+  .section__container
+    form#form.form.card
+      input.form__input(
+        type="text" 
+        name='name'
+        title="Solo acepta letras y espacios"
+        pattern="^[A-Za-zÑñÝáÉéÝíÓóÚúÜü\s]+$"
+        required   
+        placeholder="Nombre *"
+      ) 
+      input.form__input(
+        type="email" 
+        name='email'
+        title='Email incorrecto'
+        pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+        required  
+        placeholder="Email *"
+      )
+      textarea.form__area(
+        name="comments"              
+        rows="10"
+        title='Tú mensaje no debe exceder los 255 caracteres'
+        data-pattern="^.{1,255}$"
+        required
+        placeholder="Déjame tú mensaje *"
+        )
+      button.btn.btn-primary.card__input Enviar mensaje
+      article#response.section.form__response.hidden
+        .card
+          img#loader.form__loader(src="./assets/loader.svg", alt="Enviando...")
+          p#message
+    section.contact.card
+      .contact__item             
+        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><path fill="currentColor" d="M4 3a2 2 0 0 0-2 2v.201l6 3.231l6-3.23V5a2 2 0 0 0-2-2H4Zm10 3.337L8.237 9.44a.5.5 0 0 1-.474 0L2 6.337V11a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V6.337Z"/></svg>
+        p.contact__text ariel29111978@hotmail.com
+      .contact__item 
+        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 18 24"><path fill="currentColor" d="M8.075 23.52C1.264 13.642 0 12.629 0 9c0-4.971 4.029-9 9-9s9 4.029 9 9c0 3.629-1.264 4.64-8.075 14.516a1.126 1.126 0 0 1-1.847.004l-.002-.004zM9 12.75a3.75 3.75 0 1 0 0-7.5a3.75 3.75 0 0 0 0 7.5z"/></svg>
+        p.contact__text Buenos Aires, Temperley
+      .contact__item
+        include ./linkLinkedin.pug
+        include ./linkGithub.pug

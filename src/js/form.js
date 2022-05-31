@@ -17,19 +17,18 @@ form.addEventListener('submit', (e) => {
     .then(() => {
       loader.classList.add('hidden');
       message.textContent = 'Gracias por tú mensaje';
-      form.reset();
     })
     .catch((err) => {
       loader.classList.add('hidden');
       message.textContent = err;
-      form.reset();
     });
-
+  // Pequeño bloque de código para probar la vista de la ventana "response"
   // setTimeout(() => {
   //   loader.classList.add('hidden');
   //   message.textContent = 'Gracias por tú mensaje';
   //   // form.reset();
   // }, 2000);
+  form.reset();
   setTimeout(() => {
     form[3].disabled = false;
     loader.classList.remove('hidden');
