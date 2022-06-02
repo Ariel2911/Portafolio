@@ -1,10 +1,16 @@
-- var navItems = ['Inicio', 'Tecnologías', 'Proyectos', 'Contacto'];
+- 
+  var navItems  = {
+    inicio: '#about-me',
+    Tecnologías: '#technology',
+    Proyectos: '#projects',
+    Contacto: '#contact'
+  };
 
 header.header 
   nav#nav-bar.nav-bar
     ul#nav-bar-list.nav-bar__list
-      each navItem in navItems 
+      each val, key in navItems  
         li.nav-bar__item 
-          a.nav-bar__link(href="#about-me")=navItem
+          a.nav-bar__link(href=val)=key 
   button#btn-menu.btn-menu(type="button")
     span#btn-menu-bar.btn-menu__bar
