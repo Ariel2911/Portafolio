@@ -1,9 +1,16 @@
-const btnSeeMore = document.getElementById('btnSeeMore');
-const seeMore = document.querySelector('.more-technologies').classList;
+const btnSeeMore = () => {
+  const btn = document.getElementById('btnSeeMore');
+  const seeMore = document.querySelector('.section__list').classList;
+  const seMore = document.querySelector('.section__list');
 
-btnSeeMore.addEventListener('click', () => {
-  seeMore.toggle('more-technologies--active');
-  const active = Object.values(seeMore).includes('more-technologies--active');
+  btn.addEventListener('click', (e) => {
+    console.log(e.target);
+    console.log(seMore);
+    seeMore.toggle('section__list--more');
+    const active = Object.values(seeMore).includes('section__list--more');
 
-  btnSeeMore.textContent = active ? 'ver menos' : 'ver más';
-});
+    btn.textContent = active ? 'ver menos' : 'ver más';
+  });
+};
+
+export default btnSeeMore;

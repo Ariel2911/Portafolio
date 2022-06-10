@@ -1,5 +1,4 @@
-- var oneTechItems = ['React', 'TypeScript', 'Styled-Component', 'JavaScript']
-- var twoTechItems = ['HTML', 'CSS', 'Pug', 'Sass','NPM', 'Gulp', 'Webpack', 'Git', 'Figma']
+- var oneTechItems = ['React', 'TypeScript', 'Styled-Component', 'JavaScript','HTML', 'CSS', 'Pug', 'Sass','NPM', 'Gulp', 'Webpack', 'Git', 'Figma']
 
 section#technology.section
   h2.section__title Tecnologías
@@ -8,12 +7,6 @@ section#technology.section
       each oneTechItem in oneTechItems
         li.card.card--technology
           img.card__img(src=`./assets/icons/${oneTechItem}.svg`, alt=`icono de ${oneTechItem}`)
-          h3.card__title--technology=oneTechItem
-
-    ul.section__list.more-technologies
-      each twoTechItem in twoTechItems
-        li.card.card--technology
-          img.card__img(src=`./assets/icons/${twoTechItem}.svg`, alt=`icono de ${twoTechItem}`)
-          h3.card__title--technology=twoTechItem    
+          h3.card__title--technology=oneTechItem 
            
     button#btnSeeMore.btn.btn-primary Ver más
