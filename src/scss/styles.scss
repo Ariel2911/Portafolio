@@ -1,4 +1,7 @@
 @use 'abstract/var';
+@use 'abstract/media';
+@use 'abstract/function';
+
 @use 'components/aboutMe';
 @use 'components/btnMenu';
 @use 'components/button';
@@ -6,6 +9,8 @@
 @use 'components/contact';
 @use 'components/form';
 @use 'components/header';
+@use 'components/icon';
+@use 'components/main';
 @use 'components/navBar';
 @use 'components/section';
 
@@ -27,6 +32,10 @@ img{
   border-radius: var.$radius-primary;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   text-align: center;
@@ -40,13 +49,15 @@ body {
   font-family: var.$font-secondary;
 }
 
-.main{
-  max-width: 400px;
-  min-width: 300px;
-  margin: auto;
-  
-  & > * {
-    margin: var.$margin-primary;
+@include media.query(md){
+  body{
+    font-size: 1.125rem;
+  }
+}
+
+@include media.query(lg){
+  body{
+    font-size: 1.25rem;
   }
 }
 

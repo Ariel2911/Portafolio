@@ -1,18 +1,15 @@
 @use 'abstract/var';
+@use 'abstract/media';
+@use 'abstract/mixins';
 
-.form{  
-  & input, & textarea{
+.form{    
+  &__input, &__area{
     width: 100%;
-    margin-bottom: var.$margin-primary;
-    padding: var.$padding-secundary;
-    border: var.$border-secundary;
-    border-radius: var.$radius-primary;
+    padding: 1rem;
+    @include mixins.border(secundary);
+
     font-family: var.$font-secondary;
     font-size: 1rem;
-  }
-
-  &__input{
-
   }
 
   &__area{
@@ -30,5 +27,11 @@
   
   &__loader {
     width: 32px;
+  }
+}
+
+@include media.query(md) {
+  .form{
+    width: 45vw;
   }
 }

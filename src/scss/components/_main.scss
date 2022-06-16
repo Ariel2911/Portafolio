@@ -1,0 +1,19 @@
+@use 'abstract/var';
+@use 'abstract/media';
+@use 'abstract/function';
+
+.main{
+  padding: function.increment(0.5, var.$padding-priamry);
+}
+
+@include media.query(md){
+  .main{
+    padding: function.increment(0.5, var.$padding-priamry, md);   
+  }
+}
+
+@include media.query(lg){
+  .main{
+    padding: function.increment(0.5, var.$padding-priamry, lg);
+  }
+}

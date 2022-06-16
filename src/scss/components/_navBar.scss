@@ -1,64 +1,68 @@
 @use 'abstract/var';
-.nav-bar{
+@use 'abstract/media';
+
+.nav-bar {
   position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 30; 
+  top: 0;
+  left: 0;
+  z-index: 30;
 
-    width: 160px;    
-    border-bottom:1px solid var.$color-tertiary ;
-    border-right:1px solid var.$color-tertiary ;
-    border-bottom-right-radius: var.$radius-primary;
-    
-    background-color: var.$color-secundary;
-    
-    transform: translateX(-100%);
-    transition: transform 0.5s;
+  width: 160px;
 
-    &--active{
-      transform: translateX(0);
-    }
+  border-bottom: 1px solid var.$color-tertiary;
+  border-right: 1px solid var.$color-tertiary;
+  border-bottom-right-radius: var.$radius-primary;
 
-    &__list{
-      text-align: start;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      margin: 0;
-      padding: var.$padding-primary; 
-    }
+  background-color: var.$color-secundary;
 
-    &__item{
-      margin: var.$margin-primary 0;
-    }
+  transform: translateX(-100%);
+  transition: transform 0.5s;
 
-    &__link{
-      display: block;
-      padding: var.$padding-secundary;
-      color: var.$color-tertiary;
-    }
+  &--active {
+    transform: translateX(0);
+  }
 
-    &__link:hover{
-      border-radius: var.$radius-secundary;
-      background-color: var.$color-primary; 
-    }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    text-align: start;
+    margin: 0;
+    padding: 1rem;
+  }
+
+  &__item {
+    margin: 1rem 0;
+  }
+
+  &__link {
+    display: block;
+    padding: 0.5rem;
+    color: var.$color-tertiary;
+  }
+
+  &__link:hover {
+    border-radius: var.$radius-primary;
+    background-color: var.$color-primary;
+  }
 }
 
-@media screen and (min-width: 520px){
-  .nav-bar{
-      width: 100vw;
-      border-right:none ;
-      border-radius: 0;
-    
+@include media.query(md) {
+  .nav-bar {
+    width: 100vw;
+    border-right: none;
+    border-radius: 0;
+    font-size: 1.25rem;
 
-      transform: translateX(0);
+    transform: translateX(0);
   }
-  .nav-bar__list{
-      flex-direction: row;
-      justify-content: center;
-      padding: 0;
+  .nav-bar__list {
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
   }
-  .nav-bar__item{
-      margin: 0;
+  .nav-bar__item {
+    margin: 0;
   }
 }

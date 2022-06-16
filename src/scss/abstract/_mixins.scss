@@ -1,0 +1,16 @@
+@use 'var';
+
+$types: (
+  primary: var.$border-primary,
+  secundary: var.$border-secundary,
+);
+
+@mixin border ($type: secundary) {
+  @if map-has-key($types, $type) {
+    border: map-get($types, $type );
+    border-radius: var.$radius-primary;
+  } @else {
+    @warn "'#{ $type }' no es un breakpoint valido "
+  };
+
+}

@@ -6,7 +6,7 @@ section#technology.section
     ul.section__list
       each oneTechItem in oneTechItems
         li.card.card--technology
-          img.card__img(src=`./assets/icons/${oneTechItem}.svg`, alt=`icono de ${oneTechItem}`)
+          img.icon--technology(src=`./assets/icons/${oneTechItem}.svg`, alt=`icono de ${oneTechItem}`)
           h3.card__title--technology=oneTechItem 
            
-    button#btnSeeMore.btn.btn-primary Ver más
+    button#btnSeeMore.btn.btn-primary.btn--hidden Ver más

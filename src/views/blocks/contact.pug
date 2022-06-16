@@ -1,12 +1,12 @@
 section#contact.section
   h2.section__title Contacto
-  .section__container
+  .section__container.section__container--row
     form#form.form.card
       input.form__input(
         type="text" 
         name='name'
         title="Solo acepta letras y espacios"
-        pattern="^[a-zA-ZÀ-ÿ\s]{1,40}$"
+        pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}"
         required   
         placeholder="Nombre *"
       ) 
@@ -14,7 +14,7 @@ section#contact.section
         type="email" 
         name='email'
         title='Email incorrecto'
-        pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+        pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
         required  
         placeholder="Email *"
       )

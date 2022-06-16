@@ -1,9 +1,14 @@
 @use 'abstract/var';
+@use 'abstract/media';
 
 .header{
-  // display: flex;
   position: sticky;
-  // top: 0;
   z-index: 20;
   height: 44px;
+}
+
+@include media.query(md) {
+  .header{
+    height: 60px;
+  }
 }

@@ -1,0 +1,10 @@
+
+@function increment($size, $base, $media: sm) {
+  $add:0;
+  @if $media == md {$add: $size;};
+  @if $media == lg {$add: $size*2;};
+  
+  $result: $base + $add;
+  // @debug $result;
+  @return $result;
+};

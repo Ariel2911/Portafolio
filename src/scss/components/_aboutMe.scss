@@ -1,16 +1,32 @@
 @use 'abstract/var';
+@use 'abstract/media';
 
 .about-me{
-
+  
   &__title{
 
   }
 
   &__paragraph{
+    // margin: 0 32px;
 
   }
   
   &__icon{
     
+  }
+}
+
+@include media.query(md){
+  .about-me{
+
+    &__paragraph{ 
+      text-align: left;
+    }
+
+    &__img{
+      width: 21vw;
+      max-width: 208px;
+    }
   }
 }

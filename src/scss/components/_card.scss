@@ -1,38 +1,82 @@
 @use '../abstract/var';
+@use 'abstract/media';
+@use 'abstract/mixins';
+@use 'abstract/function';
 
-.card{
+.card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var.$padding-primary;
-  border-radius: var.$radius-primary;
+  gap: 0.5rem;
+
+  padding: function.increment(0.5, var.$padding-priamry);
+  @include mixins.border(primary);
+
   background-color: var.$bg-c-card;
 
-  &--technology{
-    max-width: 110px;
-  }  
-  &__img{
+  &--technology {
+    gap: 0;
+    max-width: 112px;
+  }
 
-  }  
-  &__title{
-    font-size: 20px;
+  &__img {
+  }
+  
+  &__title {
+    font-size: 1.25rem;
     margin: 0;
-    margin-bottom: var.$margin-primary;
+    margin-bottom: 1rem;
 
-    &--technology{
+    &--technology {
       margin: auto 0;
       font-size: 0.75rem;
     }
-
   }
-  &__container{
-    // display: flex;
-    // flex-direction: row;
+  &__container {
   }
-  &__subtitle{
-
+  &__subtitle {
+    margin: 0 auto 8px;
   }
-  &__text{
+  &__text {
+    margin: 0 auto 4px;
+  }
+}
 
+@include media.query(md) {
+  .card {
+    gap: 1rem;
+    padding: function.increment(0.5, var.$padding-priamry, md);
+
+    &--technology {
+      gap: 0;
+      padding: 0.5rem;
+    }
+
+    &__title {
+      font-size: 1.75rem;
+
+      &--technology {
+        font-size: 1rem;
+      }
+    }
+
+    &__aboutMe {
+      flex-direction: row;
+    }
+  }
+}
+
+@include media.query(lg) {
+  .card {
+    padding: function.increment(0.5, var.$padding-priamry, lg);
+
+    &--technology {
+      gap: 0;
+      padding: 1rem;
+    }
+
+    &__title {
+      font-size: 2.25rem;
+    }
   }
 }
