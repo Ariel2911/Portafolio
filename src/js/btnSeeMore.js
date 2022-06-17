@@ -1,4 +1,4 @@
-const btnSeeMore = () => {
+(() => {
   const btn = document.getElementById('btnSeeMore');
   const seeMore = document.querySelector('.section__list').classList;
   const seMore = document.querySelector('.section__list');
@@ -11,6 +11,4 @@ const btnSeeMore = () => {
 
     btn.textContent = active ? 'ver menos' : 'ver más';
   });
-};
-
-export default btnSeeMore;
+})();

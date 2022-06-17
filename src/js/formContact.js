@@ -1,4 +1,4 @@
-const formContact = () => {
+(() => {
   const form = document.getElementById('form');
   const response = document.getElementById('response');
   const loader = document.getElementById('loader');
@@ -38,6 +38,4 @@ const formContact = () => {
       response.classList.add('hidden');
     }, 3000);
   });
-};
-
-export default formContact;
+})();

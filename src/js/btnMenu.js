@@ -1,4 +1,4 @@
-const btnButton = () => {
+(() => {
   const btnMenu = document.getElementById('btn-menu');
   const btnMenuBar = document.getElementById('btn-menu-bar');
   const navBar = document.getElementById('nav-bar');
@@ -15,6 +15,4 @@ const btnButton = () => {
       navBar.classList.toggle('nav-bar--active');
     });
   });
-};
-
-export default btnButton;
+})();
