@@ -1,0 +1,10 @@
+
+mixin cardProyect(proyect)
+  article.card
+    h3.card__title=proyect.title
+    img.card__img(src=proyect.imgSrc, alt="imagen de la pantalla del proyecto")
+    .card__description-container
+      p.card__subtitle Realizado con:
+      p.card__text=proyect.description
+    a.btn.btn-primary(href=proyect.place target="_blank" rel="noopener") Ir al sitio
+    a.btn.btn-secondary(href=proyect.repository target="_blank" rel="noopener") Ir al repositorio
