@@ -1,11 +1,8 @@
 (() => {
   const btn = document.getElementById('btnSeeMore');
   const seeMore = document.querySelector('.section__list').classList;
-  const seMore = document.querySelector('.section__list');
 
-  btn.addEventListener('click', (e) => {
-    console.log(e.target);
-    console.log(seMore);
+  btn.addEventListener('click', () => {
     seeMore.toggle('section__list--more');
     const active = Object.values(seeMore).includes('section__list--more');
 

@@ -1,12 +1,13 @@
 (() => {
   const form = document.getElementById('form');
+  const formButton = document.getElementById('formButton');
   const response = document.getElementById('response');
   const loader = document.getElementById('loader');
   const message = document.getElementById('message');
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    form[3].disabled = true;
+    formButton.disabled = true;
     response.classList.remove('hidden');
     message.textContent = 'Enviando...';
 
@@ -33,7 +34,7 @@
 
     form.reset();
     setTimeout(() => {
-      form[3].disabled = false;
+      formButton.disabled = false;
       loader.classList.remove('hidden');
       response.classList.add('hidden');
     }, 3000);
