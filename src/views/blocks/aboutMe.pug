@@ -1,3 +1,6 @@
+include ../abstract/mixins.pug
+include ../abstract/var.pug
+
 section#about-me.section
   .section__title-container
     h1.section__title Ariel Barrios
@@ -9,6 +12,5 @@ section#about-me.section
         h3.about-me__title ¿Quién soy?
         p.about-me__paragraph Hola! Soy desarrollador y actualmente me enfoco en la creación de páginas personalizadas. Siempre me encuentro en constante aprendizaje, actualizando e incrementando mis conocimientos y habilidades. Me gusta el trabajo colaborativo y me destaco en procesos ágiles y flexibles.
     .contact__item.contact__item--aboutMe
-      include ./linkLinkedin.pug
-      include ./linkGithub.pug
-      
+      +socialNetworkLink(linkedin)
+      +socialNetworkLink(github)      

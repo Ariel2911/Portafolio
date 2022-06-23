@@ -8,3 +8,11 @@ mixin cardProyect(proyect)
       p.card__text=proyect.description
     a.btn.btn-primary(href=proyect.place target="_blank" rel="noopener") Ir al sitio
     a.btn.btn-secondary(href=proyect.repository target="_blank" rel="noopener") Ir al repositorio
+
+mixin socialNetworkLink(data)
+  a.contact__link(
+    href=data.href 
+    target="_blank" 
+    rel="noopener noreferrer"
+    )
+    img.contact__icon.icon(src=data.src, alt=data.alt)
