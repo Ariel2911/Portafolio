@@ -1,12 +1,12 @@
-- var oneTechItems = ['React', 'TypeScript', 'Styled-Component', 'JavaScript','HTML', 'CSS', 'Pug', 'Sass','NPM', 'Gulp', 'Webpack', 'Git', 'Figma']
+include ../abstract/var.pug
 
 section#technology.section
   h2.section__title Tecnologías
   .section__container
     ul.section__list
-      each oneTechItem in oneTechItems
+      each technologiesItem in technologiesItems
         li.card.card--technology
-          img.icon--technology(src=`./assets/icons/${oneTechItem}.svg`, alt=`icono de ${oneTechItem}`)
-          h3.card__title--technology=oneTechItem 
+          img.icon--technology(src=`./assets/icons/${technologiesItem}.svg`, alt=`icono de ${technologiesItem}`)
+          h3.card__title--technology=technologiesItem 
            
     button#btnSeeMore.btn.btn-primary.btn--hidden Ver más

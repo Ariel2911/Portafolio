@@ -1,0 +1,30 @@
+form#form.form.card
+  input.form__input(
+    type="text" 
+    name='name'
+    title="Solo acepta letras y espacios"
+    pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}"
+    required   
+    placeholder="Nombre *"
+  ) 
+  input.form__input(
+    type="email" 
+    name='email'
+    title='Email incorrecto'
+    pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+    required  
+    placeholder="Email *"
+  )
+  textarea.form__area(
+    name="comments"              
+    rows="10"
+    title='Tú mensaje no debe exceder los 255 caracteres'
+    data-pattern="^.{1,255}$"
+    required
+    placeholder="Déjame tú mensaje *"
+  )
+  button.btn.btn-primary.card__input Enviar mensaje
+  article#response.section.form__response.hidden
+    .card
+      img#loader.form__loader(src="./assets/loader.svg", alt="Enviando...")
+      p#message
