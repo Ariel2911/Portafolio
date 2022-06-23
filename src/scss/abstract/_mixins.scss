@@ -12,5 +12,4 @@ $types: (
   } @else {
     @warn "'#{ $type }' no es un breakpoint valido "
   };
-
 }

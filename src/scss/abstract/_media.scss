@@ -14,26 +14,3 @@ $breakpoints: (
     @warn "'#{ $breakpoint }' no es un breakpoint valido "
   }
 };
-
-// @mixin media($types...) {
-//   @each $type in $types {
-//     @media #{$type} {
-//     }
-//   }
-//   @content($type);
-// };
-
-// @mixin zxc ($media, $padding){
-//   $padding:1rem;
-  
-//   @if $media == md {
-//     $padding: 1.5rem;
-//   }
-// }
-
-// @function asd ($padding) {
-//   $padding: $padding+0.5;
-//   // @warn $padding;
-//   // $padding: 64px;
-//   @return $padding;
-// }

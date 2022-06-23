@@ -2,6 +2,7 @@
 @use 'abstract/media';
 @use 'abstract/function';
 
+@use 'components/resets';
 @use 'components/aboutMe';
 @use 'components/btnMenu';
 @use 'components/button';
@@ -13,28 +14,6 @@
 @use 'components/main';
 @use 'components/navBar';
 @use 'components/section';
-
-// Reset
-* {
-  box-sizing: border-box;
-}
-a {
-  text-decoration: none;
-  color: inherit;
-}
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-img{
-  width: 100%;
-  border-radius: var.$radius-primary;
-}
-
-html{
-  scroll-behavior: smooth;
-}
 
 body {
   margin: 0;

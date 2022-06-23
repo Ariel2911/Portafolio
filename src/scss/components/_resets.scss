@@ -1,0 +1,25 @@
+@use 'abstract/var';
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  border-radius: var.$radius-primary;
+}
+
+html {
+  scroll-behavior: smooth;
+}
