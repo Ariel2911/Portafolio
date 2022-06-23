@@ -1,9 +1,7 @@
 include ../abstract/mixins.pug
 include ../abstract/var.pug
 
-section#projects.section
-  h2.section__title Proyectos
-  .section__container.section__container--row
+article.slider
+  #sliderContainer.slider-container
     each bestProyect in bestProyects
       +cardProyect(bestProyect)
-  include ./slider.pug

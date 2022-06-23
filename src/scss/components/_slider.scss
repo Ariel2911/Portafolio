@@ -1,0 +1,11 @@
+.slider{
+  overflow: hidden;
+
+  &-container{
+    display: flex;
+    transition: transform, 2s;
+    & > * {
+      margin: 0 16px;
+    }
+  }
+}
