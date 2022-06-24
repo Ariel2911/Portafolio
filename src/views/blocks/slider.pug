@@ -2,6 +2,9 @@ include ../abstract/mixins.pug
 include ../abstract/var.pug
 
 article.slider
+  h2.section__title Otros Proyectos
   #sliderContainer.slider-container
-    each bestProyect in bestProyects
-      +cardProyect(bestProyect)
+    each sliderProyect in sliderProyects
+      +cardProyect(sliderProyect)
+  <span id="prevArrow" class="slider__iconPrev btn"></span>
+  <span id="nextArrow" class="slider__iconNext btn"></span>

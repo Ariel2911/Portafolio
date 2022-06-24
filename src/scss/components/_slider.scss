@@ -1,11 +1,45 @@
+@use 'abstract/var';
+@use 'abstract/media';
+
 .slider{
+  position: relative;
   overflow: hidden;
 
   &-container{
     display: flex;
     transition: transform, 2s;
     & > * {
-      margin: 0 16px;
+      margin: 0 8px;
     }
+  }
+
+  &__iconPrev, &__iconNext{
+    position: absolute;
+    top: 50%;
+    background-color: var.$color-tertiary;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 12px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;    
+  }
+  
+  &__iconPrev{
+    background-image: url('../../assets/icons/icon-prev.svg');
+    left: 0;
+    
+  }
+
+  &__iconNext{
+    background-image: url('../../assets/icons/icon-next.svg');
+    right: 0;
+  }
+}
+
+@include media.query(md) {
+  .slider{
+    max-width: 462px;
+    margin: auto;
   }
 }

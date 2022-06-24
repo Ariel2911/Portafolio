@@ -2,19 +2,7 @@
 @use 'abstract/media';
 @use 'abstract/function';
 
-@use 'components/resets';
-@use 'components/aboutMe';
-@use 'components/btnMenu';
-@use 'components/button';
-@use 'components/card';
-@use 'components/contact';
-@use 'components/form';
-@use 'components/header';
-@use 'components/icon';
-@use 'components/main';
-@use 'components/navBar';
-@use 'components/section';
-@use 'components/slider';
+@use 'components/index';
 
 body {
   margin: 0;
