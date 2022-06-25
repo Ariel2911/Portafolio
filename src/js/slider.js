@@ -2,22 +2,37 @@
   const sliderContainer = document.getElementById('sliderContainer');
   const sliderItems = parseInt(sliderContainer.childElementCount, 10);
 
-  // asigna el tamaño del slider-container
+  const prevArrow = document.getElementById('prevArrow');
+  const nextArrow = document.getElementById('nextArrow');
+
+  // Establece el tamaño del contenedor de las tarjetas
   const width = 100 * sliderItems;
-  sliderContainer.style = `width: ${width}%;`;
+  sliderContainer.style.width = `${width}%`;
 
-  const translate = 100 / sliderItems;
-  let translateX = 0;
+  // Específica el porcentaje del ancho de cada imagen
+  const percentage = 100 / sliderItems;
 
-  setInterval(() => {
-    sliderContainer.setAttribute(
-      'style',
-      `transform:translateX(${translateX}%);width: ${width}%;`,
-    );
-    translateX -= translate;
+  let count = 0;
 
-    if (translateX <= -100) {
-      translateX = 0;
-    }
-  }, 4000);
+  const sliderMove = (move) => {
+    if (move === 'prev') count -= 1;
+    if (move === 'next') count += 1;
+
+    if (count < 0) count = sliderItems - 1;
+    if (count > sliderItems - 1) count = 0;
+    sliderContainer.style.transform = `translateX(-${count * percentage}%)`;
+  };
+
+  prevArrow.addEventListener('click', () => sliderMove('prev'));
+  nextArrow.addEventListener('click', () => sliderMove('next'));
+
+  let interval = setInterval(sliderMove, 3000, 'next');
+
+  const sliderAutoMove = (status = 'on') => {
+    if (status === 'on') interval = setInterval(sliderMove, 3000, 'next');
+    if (status === 'off') clearInterval(interval);
+  };
+
+  sliderContainer.addEventListener('mouseenter', () => sliderAutoMove('off'));
+  sliderContainer.addEventListener('mouseleave', () => sliderAutoMove('on'));
 })();
