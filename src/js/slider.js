@@ -6,8 +6,7 @@
   const nextArrow = document.getElementById('nextArrow');
 
   // Establece el tamaño del contenedor de las tarjetas
-  const width = 100 * sliderItems;
-  sliderContainer.style.width = `${width}%`;
+  sliderContainer.style.width = `${100 * sliderItems}%`;
 
   // Específica el porcentaje del ancho de cada imagen
   const percentage = 100 / sliderItems;
