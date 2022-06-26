@@ -26,13 +26,13 @@
   }
   
   &__iconPrev{
-    background-image: url('../../assets/icons/icon-prev.svg');
+    background-image: url('../assets/icons/icon-prev.svg');
     left: 0;
     
   }
 
   &__iconNext{
-    background-image: url('../../assets/icons/icon-next.svg');
+    background-image: url('../assets/icons/icon-next.svg');
     right: 0;
   }
 }
