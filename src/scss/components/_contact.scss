@@ -28,18 +28,13 @@
   }
 
   &__link {
-    margin: 0 16px;
+    margin: 0 1rem;
     line-height: 0px;
   }
 
-  // &__icon {
-  //   filter: brightness(0) saturate(100%) invert(39%) sepia(6%) saturate(2354%)
-  //     hue-rotate(314deg) brightness(76%) contrast(71%);
-  // }
-
   &__text {
     margin: 0;
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 
@@ -52,7 +47,7 @@
       }
 
       &--aboutMe {
-        gap: 32px;
+        gap: 2rem;
         width: 40vw;
       }
     }
